@@ -1,17 +1,19 @@
-package main;
-import javax.swing.JFrame;
+/*
 
+Set up JFrame, receive user input, start game loop
+
+*/
+
+package main;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class Main {
 	
-	private static final int WIDTH = 500;
-	private static final int HEIGHT = 500; // JFrame Size
-	
     public static void main(String[] args) {
-    	final JFrame frame = new JFrame("Snake Game"); // JFrame Window
-    	frame.setSize(WIDTH, HEIGHT);
-    	frame.setVisible(true);
-    	final Game game = new Game(WIDTH, HEIGHT);
-    	frame.add(game);
+    	
     }
 }
