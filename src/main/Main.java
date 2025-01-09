@@ -29,7 +29,7 @@ public class Main {
     			// Detect key pressed
     			int keyCode = e.getKeyCode();
     			if (keyCode == KeyEvent.VK_UP) {
-    				// 77game.getSnake().setDirection(0);
+    				// game.getSnake().setDirection(0);
     			} else if (keyCode == KeyEvent.VK_RIGHT {
     				
     			} else if (keyCode == KeyEvent.VK_DOWN) {
