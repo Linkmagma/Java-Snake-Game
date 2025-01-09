@@ -1,5 +1,6 @@
 /*
  
+
 Snake object: snake's body (Point objects), method to grow and move
 
 */
@@ -46,7 +47,6 @@ public class Snake {
 		}
 		
 		body.addHead(newHead); // Add new head at the front of the LinkedList
-		body.removehead(); // Remove last list item or tail of snake
-		
+		body.removeHead(); // Remove last list item or tail of snake
 	}
 }
