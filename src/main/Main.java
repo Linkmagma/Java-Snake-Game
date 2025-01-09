@@ -29,13 +29,13 @@ public class Main {
     			// Detect key pressed
     			int keyCode = e.getKeyCode();
     			if (keyCode == KeyEvent.VK_UP) {
-    				// game.getSnake().setDirection(0);
+    				game.getSnake().setDirection(0);
     			} else if (keyCode == KeyEvent.VK_RIGHT {
-    				
+    				game.getSnake().setDirection(1);
     			} else if (keyCode == KeyEvent.VK_DOWN) {
-    				
+    				game.getSnake().setDirection(2);
     			} else if (keyCode == KeyEvent.VK_LEFT) {
-    				
+    				game.getSnake().setDirection(3);
     			}
     		}
     	});
