@@ -21,4 +21,8 @@ public class Food {
 		y = gen.nextInt(0,49) * 10;
 		location = new Point(x,y);
 	}
+	public Point getLocation() {
+		return location;
+	}
+	
 }
