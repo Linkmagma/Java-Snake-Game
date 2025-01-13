@@ -13,7 +13,7 @@ import java.util.List;
 
 public class GamePanel extends JPanel {
 	
-	private Game game;
+	private Game game; // Game Logic
 	
 	public GamePanel() {
 		this.game = new Game(); // Initialize Game
@@ -21,7 +21,25 @@ public class GamePanel extends JPanel {
 		setBackground(Color.BLACK);
 	}
 	
-	public void gameActive() {
+	@Override
+	public void paintComponents(Graphics g) {
+		super.paintComponents(g);
 		
+		if (game.isActive()) {
+			gameActive(g); // Draw game elements
+		} else {
+			gameOver(g); // Draw "Game Over"
+		}
+		
+		
+	}
+	
+	public void gameActive(Graphics g) {
+		
+	}
+	
+	public void gameOver(Graphics g) {
+		g.setColor(Color.WHITE);
+		g.drawString("Game Over", 200, 150); // Game Over message
 	}
 }
