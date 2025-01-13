@@ -20,4 +20,8 @@ public class GamePanel extends JPanel {
 		setPreferredSize(new Dimension(500, 500)); // Size of GamePanel
 		setBackground(Color.BLACK);
 	}
+	
+	public void gameActive() {
+		
+	}
 }

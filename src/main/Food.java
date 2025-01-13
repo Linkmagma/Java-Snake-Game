@@ -3,12 +3,13 @@
 Food item that is randomly positioned on game grid
 
 */
+package main;
+
 import  java.util.Random;
 import java.awt.*;
 
-package main;
-
 public class Food {
+	private Food food;
 	private Random gen = new Random();
 	private int x;
 	private int y;
