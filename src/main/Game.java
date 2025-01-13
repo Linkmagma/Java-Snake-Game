@@ -37,6 +37,8 @@ public class Game implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (active) {
 			updateGame();
+			checkCollisions();
+			getFood();
 		}
 	}
 		
@@ -47,19 +49,17 @@ public class Game implements ActionListener {
 			score += 1;
 			food.newLocation();
 			snake.grow();
+			System.out.println("Score: " + score);
 		}
 	}
 		
-	/*	
 	
 	private void checkCollisions() {
-		if (snake.collidesWithBorder()) {
-			active = false; // Game over
-			System.out.println("Game Over. Score: " + score);
+		if (snake.getHead().x < 0 || snake.getHead().x >= 500 || snake.getHead().y < 0 || snake.getHead().y >= 500) {
+			active = false; // Game Over
+			System.out.println("Game Over.");
 		}
 	}
-	
-	*/
 	
 	// Getter methods for game components
 	
