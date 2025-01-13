@@ -9,6 +9,7 @@ import java.awt.*;
 package main;
 
 public class Food {
+	private Food food;
 	private Random gen = new Random();
 	private int x;
 	private int y;
