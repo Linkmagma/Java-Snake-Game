@@ -23,7 +23,7 @@ public class Snake {
 		body.add(new Point(30, 50)); // Second segment after head
 		
 		direction = 1; // 0 = up, 1 = right, 2 = down, 3 = left)
-	}
+	}	 
 	
 	// Move snake in direction by adding head segment and removing last body segment
 	public void move() {

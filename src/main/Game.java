@@ -42,18 +42,13 @@ public class Game implements ActionListener {
 		
 	private void updateGame() {
 		snake.move(); // Move snake based on direction registered from input
-	}
-	/*
-	 
-		if (snake.head().equals(food.getLocation())) {
+		
+		if (snake.getHead().equals(food.getLocation())) {
 			score += 1;
-			food.randomFood();
+			food.newLocation();
 			snake.grow();
 		}
 	}
-	
-	*/
-	
 		
 	/*	
 	
