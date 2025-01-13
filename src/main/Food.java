@@ -3,10 +3,11 @@
 Food item that is randomly positioned on game grid
 
 */
-import  java.util.Random;
-import java.awt.*;
 
 package main;
+
+import  java.util.Random;
+import java.awt.*;
 
 public class Food {
 	private Food food;
