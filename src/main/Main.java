@@ -14,7 +14,7 @@ import java.awt.event.KeyEvent;
 public class Main {
 	
     public static void main(String[] args) {
-    	JFrame frame = new JFrame("Snake Game"); // Window title
+    	JFrame frame = new JFrame("Snake"); // Window title
     	GamePanel panel = new GamePanel(); // Game panel for graphics inside JFrame
     	Game game = new Game(); // Game object
     	
@@ -30,12 +30,16 @@ public class Main {
     			int keyCode = e.getKeyCode();
     			if (keyCode == KeyEvent.VK_UP) {
     				game.getSnake().setDirection(0);
-    			} else if (keyCode == KeyEvent.VK_RIGHT {
+    				System.out.println("UP");
+    			} else if (keyCode == KeyEvent.VK_RIGHT) {
     				game.getSnake().setDirection(1);
+    				System.out.println("RIGHT");
     			} else if (keyCode == KeyEvent.VK_DOWN) {
     				game.getSnake().setDirection(2);
+    				System.out.println("DOWN");
     			} else if (keyCode == KeyEvent.VK_LEFT) {
     				game.getSnake().setDirection(3);
+    				System.out.println("LEFT");
     			}
     		}
     	});

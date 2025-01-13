@@ -8,7 +8,7 @@ game loop, game state (Game Over)
 package main;
 
 import java.awt.*;
-import java.awt.event.*; // Captures key presses (Arrow Keys)
+import java.awt.event.*; // Captures key presses
 import javax.swing.*;
 
 
@@ -34,15 +34,17 @@ public class Game implements ActionListener {
 	
 	
 	// Method triggered by timer every 100ms
-	public void actionOccurred(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) {
 		if (active) {
-			updateGame(); // Move snake and check if food eaten
-			checkCollisions();  // Check for collision
+			updateGame();
 		}
+	}
 		
 	private void updateGame() {
 		snake.move(); // Move snake based on direction registered from input
-		
+	}
+	/*
+	 
 		if (snake.head().equals(food.getLocation())) {
 			score += 1;
 			food.randomFood();
@@ -50,12 +52,19 @@ public class Game implements ActionListener {
 		}
 	}
 	
+	*/
+	
+		
+	/*	
+	
 	private void checkCollisions() {
 		if (snake.collidesWithBorder()) {
 			active = false; // Game over
 			System.out.println("Game Over. Score: " + score);
 		}
 	}
+	
+	*/
 	
 	// Getter methods for game components
 	
@@ -74,5 +83,4 @@ public class Game implements ActionListener {
 	public Food getFood() {
 		return food;
 	}
-	
 }

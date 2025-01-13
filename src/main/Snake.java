@@ -35,7 +35,7 @@ public class Snake {
 			case 0:
 				newHead = new Point(head.x, head.y - SIZE); // Decrease y to move upwards
 				break;
-			case 3:
+			case 1:
 				newHead = new Point(head.x + SIZE, head.y); // Increase x to move right
 				break;
 			case 2:
