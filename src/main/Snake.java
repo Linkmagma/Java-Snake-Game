@@ -13,7 +13,7 @@ import java.util.LinkedList;
 public class Snake {
 	
 	private LinkedList<Point> body; // Snake's Body using LinkedList
-	private int direction; // Snake direction (Passes to Game.java where it is updated on game board)
+	private int direction; // Snake direction
 	private final int SIZE = 10; // Each snake segment = amount of pixels specified
 
 	public Snake() {
