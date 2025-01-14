@@ -26,7 +26,7 @@ public class Game implements ActionListener {
 		this.food = new Food(); // Initialize snake and food
 		this.active = true;
 		this.score = 0; // Set score to 0 and game to true
-		this.timer = new Timer(100, this); // Initialize timer for game loop at 100ms or 10 times per second = 10FPS
+		this.timer = new Timer(50, this); // Initialize timer for game loop at 100ms or 10 times per second = 10FPS
 		this.panel = panel; // Initialize Panel
 	}
 	

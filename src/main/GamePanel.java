@@ -18,6 +18,7 @@ public class GamePanel extends JPanel {
 	public GamePanel() {
 		setPreferredSize(new Dimension(500, 500)); // Size of GamePanel
 		setBackground(Color.BLACK);
+		setDoubleBuffered(true); // Enable double buffering
 	}
 	
 	public void setGame(Game game) {
