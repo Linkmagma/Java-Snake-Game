@@ -45,6 +45,9 @@ public class Main {
     			} else if (keyCode == KeyEvent.VK_LEFT) {
     				game.getSnake().setDirection(3);
     				System.out.println("LEFT");
+    			} else if (keyCode == KeyEvent.VK_0) {
+    				game.restart();
+    				System.out.println("RESTART");
     			}
     		}
     	});

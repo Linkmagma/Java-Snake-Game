@@ -28,7 +28,7 @@ public class Game implements ActionListener {
 		this.active = true;
 		this.score = 0; // Set score to 0 and game to true
 		this.highScore = 0;
-		this.timer = new Timer(50, this); // Initialize timer for game loop at 100ms or 10 times per second = 10FPS
+		this.timer = new Timer(100, this); // Initialize timer for game loop at 100ms or 10 times per second = 10FPS
 		this.panel = panel; // Initialize Panel
 	}
 	
@@ -57,6 +57,15 @@ public class Game implements ActionListener {
 			snake.grow();
 			System.out.println("Score: " + score);
 		}
+	}
+	
+	public void restart() {
+		snake = new Snake();
+		food = new Food();
+		score = 0;
+		active = true;
+		timer.restart();
+		panel.repaint();
 	}
 		
 	

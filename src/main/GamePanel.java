@@ -64,6 +64,7 @@ public class GamePanel extends JPanel {
 		g.drawString("Game Over", 180, 200);
 		g.drawString("Score: " + game.getScore(), 180, 250);
 		g.drawString("High Score: " + game.getHighScore(), 180, 270);
+		g.drawString("Press '0' to Restart", 180, 290);
 	}
 	
 	
