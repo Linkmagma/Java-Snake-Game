@@ -19,6 +19,7 @@ public class Game implements ActionListener {
 	private boolean active; // Game: Active (true) Terminated (false)
 	private Timer timer; // Timer starts game loop
 	private int score; // Player score
+	private int highScore;
 	private GamePanel panel; // Reference GamePanel
 	
 	public Game(GamePanel panel) {
@@ -26,6 +27,7 @@ public class Game implements ActionListener {
 		this.food = new Food(); // Initialize snake and food
 		this.active = true;
 		this.score = 0; // Set score to 0 and game to true
+		this.highScore = 0;
 		this.timer = new Timer(50, this); // Initialize timer for game loop at 100ms or 10 times per second = 10FPS
 		this.panel = panel; // Initialize Panel
 	}
@@ -60,6 +62,7 @@ public class Game implements ActionListener {
 	
 	private void checkBorder() {
 		if (snake.getHead().x < 0 || snake.getHead().x >= 500 || snake.getHead().y < 0 || snake.getHead().y >= 500) {
+			updateHighScore();
 			active = false;
 			System.out.println("Game Over.");
 		}
@@ -68,10 +71,17 @@ public class Game implements ActionListener {
 	private void checkBody() {
 		for (int i = 1; i < snake.getBody().size(); i++) {
             if (snake.getHead().equals(snake.getBody().get(i))) {
+            	updateHighScore();
                 active = false;
             }
         }
     }
+	
+	private void updateHighScore() {
+		if (score > highScore) {
+			highScore = score;
+		}
+	}
 	
 	// Getter methods for game components
 	
@@ -89,5 +99,9 @@ public class Game implements ActionListener {
 	
 	public Food getFood() {
 		return food;
+	}
+	
+	public int getHighScore() {
+		return highScore;
 	}
 }
