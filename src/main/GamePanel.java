@@ -22,8 +22,8 @@ public class GamePanel extends JPanel {
 	}
 	
 	@Override
-	public void paintComponents(Graphics g) {
-		super.paintComponents(g);
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 		
 		if (game.isActive()) {
 			gameActive(g); // Draw game elements
@@ -33,7 +33,7 @@ public class GamePanel extends JPanel {
 		
 		
 	}
-	
+			
 	public void gameActive(Graphics g) {
 		
 	}
