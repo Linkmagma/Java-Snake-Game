@@ -14,12 +14,17 @@ import java.awt.event.KeyEvent;
 public class Main {
 	
     public static void main(String[] args) {
-    	JFrame frame = new JFrame("Snake"); // Window title
-    	GamePanel panel = new GamePanel(); // Game panel for graphics inside JFrame
-    	Game game = new Game(); // Game object
     	
+    	GamePanel panel = new GamePanel(); // Game panel for graphics inside JFrame
+    	Game game = new Game(panel); // Game object passed to game constructor
+    	panel.setGame(game); // Set game for panel
+    	
+    	// Set Up JFrame
+    	
+    	JFrame frame = new JFrame("Snake"); // Window title
     	frame.setSize(500, 500);; // Window size
     	frame.add(panel); // Add panel to frame
+    	
     	
     	// KeyListener for key presses
     	

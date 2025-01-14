@@ -16,9 +16,12 @@ public class GamePanel extends JPanel {
 	private Game game;
 	
 	public GamePanel() {
-		this.game = new Game(); // Initialize Game
 		setPreferredSize(new Dimension(500, 500)); // Size of GamePanel
 		setBackground(Color.BLACK);
+	}
+	
+	public void setGame(Game game) {
+		this.game = game;
 	}
 	
 	@Override
@@ -56,6 +59,9 @@ public class GamePanel extends JPanel {
 	
 	private void gameOver(Graphics g) {
 		// Draw Game Over
+		g.setColor(Color.WHITE);
+		g.drawString("Game Over", 150, 200);
+		g.drawString("Score: " + game.getScore(), 180, 250);	
 	}
 	
 	

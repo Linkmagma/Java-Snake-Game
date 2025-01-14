@@ -19,13 +19,15 @@ public class Game implements ActionListener {
 	private boolean active; // Game: Active (true) Terminated (false)
 	private Timer timer; // Timer starts game loop
 	private int score; // Player score
+	private GamePanel panel; // Reference GamePanel
 	
-	public Game() {
+	public Game(GamePanel panel) {
 		this.snake = new Snake();
 		this.food = new Food(); // Initialize snake and food
 		this.active = true;
 		this.score = 0; // Set score to 0 and game to true
 		this.timer = new Timer(100, this); // Initialize timer for game loop at 100ms or 10 times per second = 10FPS
+		this.panel = panel; // Initialize Panel
 	}
 	
 	public void start() {
@@ -40,6 +42,7 @@ public class Game implements ActionListener {
 			checkBorder();
 			checkBody();
 			getFood();
+            panel.repaint(); // Repaint panel every 100ms
 		}
 	}
 		
@@ -76,7 +79,7 @@ public class Game implements ActionListener {
 		return active;
 	}
 	
-	public int getScore() {
+	public int getScore() {	
 		return score;
 	}
 	
