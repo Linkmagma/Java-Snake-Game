@@ -22,7 +22,8 @@ public class Main {
     	// Set Up JFrame
     	
     	JFrame frame = new JFrame("Snake"); // Window title
-    	frame.setSize(500, 500);; // Window size
+    	frame.setSize(315, 335);; // Window size
+    	frame.setResizable(false);
     	frame.add(panel); // Add panel to frame
     	
     	

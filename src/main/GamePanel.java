@@ -61,10 +61,10 @@ public class GamePanel extends JPanel {
 	private void gameOver(Graphics g) {
 		// Draw Game Over
 		g.setColor(Color.WHITE);
-		g.drawString("Game Over", 180, 200);
-		g.drawString("Score: " + game.getScore(), 180, 250);
-		g.drawString("High Score: " + game.getHighScore(), 180, 270);
-		g.drawString("Press '0' to Restart", 180, 290);
+		g.drawString("Game Over", 90, 80);
+		g.drawString("Score: " + game.getScore(), 90, 120);
+		g.drawString("High Score: " + game.getHighScore(), 90, 140);
+		g.drawString("Press '0' to Restart", 90, 160);
 	}
 	
 	

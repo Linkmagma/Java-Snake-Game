@@ -70,7 +70,7 @@ public class Game implements ActionListener {
 		
 	
 	private void checkBorder() {
-		if (snake.getHead().x < 0 || snake.getHead().x >= 500 || snake.getHead().y < 0 || snake.getHead().y >= 500) {
+		if (snake.getHead().x < 0 || snake.getHead().x >= 300 || snake.getHead().y < 0 || snake.getHead().y >= 300) {
 			updateHighScore();
 			active = false;
 			System.out.println("Game Over.");
