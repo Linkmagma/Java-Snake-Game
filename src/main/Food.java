@@ -19,7 +19,7 @@ public class Food {
 		newLocation();
 	}
 	
-	public void newLocation() {
+	public void newLocation() { // generates new location for food object
 		x = gen.nextInt(0,49) * 10;
 		y = gen.nextInt(0,49) * 10;
 		location = new Point(x,y);
