@@ -20,6 +20,8 @@ public class Game implements ActionListener {
 	private Timer timer; // Timer starts game loop
 	private int score; // Player score
 	private int highScore;
+	private Color snakeCostume;
+	private int costume;
 	private GamePanel panel; // Reference GamePanel
 	
 	public Game(GamePanel panel) {
@@ -30,6 +32,7 @@ public class Game implements ActionListener {
 		this.highScore = 0;
 		this.timer = new Timer(100, this); // Initialize timer for game loop at 100ms or 10 times per second = 10FPS
 		this.panel = panel; // Initialize Panel
+		this.costume = costume;
 	}
 	
 	public void start() {
@@ -66,6 +69,31 @@ public class Game implements ActionListener {
 		active = true;
 		timer.restart();
 		panel.repaint();
+	}
+	
+	public void changeCostume() {	
+		switch(costume) {
+		case 0: 
+			snakeCostume = Color.GREEN;
+			costume = 1;
+			break;
+		case 1:
+			snakeCostume = Color.PINK;
+			costume = 2;
+			break;
+		case 2: 
+			snakeCostume = Color.DARK_GRAY;
+			costume = 3;
+			break;
+		case 3: 
+			snakeCostume = Color.BLUE;
+			costume = 4;
+			break;
+		case 4:
+			snakeCostume = Color.MAGENTA;
+			costume = 5;
+			break;
+		}	
 	}
 		
 	
@@ -112,5 +140,9 @@ public class Game implements ActionListener {
 	
 	public int getHighScore() {
 		return highScore;
+	}
+	
+	public Color getSnakeCostume() {
+	    return snakeCostume;
 	}
 }

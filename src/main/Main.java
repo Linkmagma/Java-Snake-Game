@@ -49,6 +49,8 @@ public class Main {
     			} else if (keyCode == KeyEvent.VK_0) {
     				game.restart();
     				System.out.println("RESTART");
+    			} else if (keyCode == KeyEvent.VK_9) {
+    				game.changeCostume();
     			}
     		}
     	});

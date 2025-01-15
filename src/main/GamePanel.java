@@ -37,12 +37,14 @@ public class GamePanel extends JPanel {
 		
 	}
 	
+	
+	
 
 	private void gameActive(Graphics g) {
 		// Draw Snake
 		
 		for (Point segment : game.getSnake().getBody()) {
-			g.setColor(Color.GREEN);
+			g.setColor(game.getSnakeCostume());
 			g.fillRect(segment.x, segment.y, 10, 10); // Draw snake 10x10
 		}
 		
@@ -65,6 +67,7 @@ public class GamePanel extends JPanel {
 		g.drawString("Score: " + game.getScore(), 90, 120);
 		g.drawString("High Score: " + game.getHighScore(), 90, 140);
 		g.drawString("Press '0' to Restart", 90, 160);
+		g.drawString("Press '9' to Change Costume ", 90, 180);
 	}
 	
 	
