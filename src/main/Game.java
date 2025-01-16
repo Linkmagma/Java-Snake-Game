@@ -22,6 +22,7 @@ public class Game implements ActionListener {
 	private int highScore;
 	private Color snakeCostume;
 	private int costume;
+	private String costumeName;
 	private GamePanel panel; // Reference GamePanel
 	
 	public Game(GamePanel panel) {
@@ -33,6 +34,7 @@ public class Game implements ActionListener {
 		this.timer = new Timer(100, this); // Initialize timer for game loop at 100ms or 10 times per second = 10FPS
 		this.panel = panel; // Initialize Panel
 		this.costume = costume;
+		this.costumeName = costumeName;
 	}
 	
 	public void start() {
@@ -74,24 +76,54 @@ public class Game implements ActionListener {
 	public void changeCostume() {	
 		switch(costume) {
 		case 0: 
-			snakeCostume = Color.GREEN;
+			snakeCostume = Color.DARK_GRAY;
 			costume = 1;
+			costumeName = "Dark Gray";
 			break;
 		case 1:
 			snakeCostume = Color.PINK;
 			costume = 2;
+			costumeName = "Pink";
 			break;
 		case 2: 
-			snakeCostume = Color.DARK_GRAY;
+			snakeCostume = Color.GREEN;
 			costume = 3;
+			costumeName = "Green";
 			break;
 		case 3: 
 			snakeCostume = Color.BLUE;
 			costume = 4;
+			costumeName = "Blue";
 			break;
 		case 4:
 			snakeCostume = Color.MAGENTA;
 			costume = 5;
+			costumeName = "Magenta";
+			break;
+		case 5:
+			snakeCostume = Color.ORANGE;
+			costume = 6;
+			costumeName = "Orange";
+			break;
+		case 6:
+			snakeCostume = Color.CYAN;
+			costume = 7;
+			costumeName = "Cyan";
+			break;
+		case 7:
+			snakeCostume = Color.WHITE;
+			costume = 8;
+			costumeName = "White";
+			break;
+		case 8:
+			snakeCostume = Color.RED;
+			costume = 9;
+			costumeName = "Red";
+			break;
+		case 9:
+			snakeCostume = Color.YELLOW;
+			costume = 0;
+			costumeName = "Yellow";
 			break;
 		}	
 	}
@@ -145,4 +177,10 @@ public class Game implements ActionListener {
 	public Color getSnakeCostume() {
 	    return snakeCostume;
 	}
+	
+	public String getCostumeName() {
+		return costumeName;
+	}
+	
+	
 }

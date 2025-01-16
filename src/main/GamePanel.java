@@ -71,8 +71,9 @@ public class GamePanel extends JPanel {
 		g.drawString("Game Over", 90, 80);
 		g.drawString("Score: " + game.getScore(), 90, 120);
 		g.drawString("High Score: " + game.getHighScore(), 90, 140);
-		g.drawString("Press '0' to Restart", 90, 160);
-		g.drawString("Press '9' to Change Costume ", 90, 180);
+		g.drawString("Current Costume: " + game.getCostumeName(), 90, 160);
+		g.drawString("Press '0' to Restart", 90, 200);
+		g.drawString("Press '9' to Change Costume ", 90, 220);
 	}
 	
 	

@@ -51,6 +51,8 @@ public class Main {
     				System.out.println("RESTART");
     			} else if (keyCode == KeyEvent.VK_9) {
     				game.changeCostume();
+    				System.out.println("Costume Changed To: " + game.getCostumeName());
+    				panel.repaint();
     			}
     		}
     	});
