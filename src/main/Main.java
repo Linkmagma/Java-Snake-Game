@@ -26,7 +26,6 @@ public class Main {
     	frame.setResizable(false);
     	frame.add(panel); // Add panel to frame
     	
-    	
     	// KeyListener for key presses
     	
     	frame.addKeyListener(new KeyAdapter() {
@@ -49,7 +48,7 @@ public class Main {
     			} else if (keyCode == KeyEvent.VK_0) {
     				game.restart();
     				System.out.println("RESTART");
-    			} else if (keyCode == KeyEvent.VK_9) {
+    			} else if (keyCode == KeyEvent.VK_9 && !game.isActive()) {
     				game.changeCostume();
     				System.out.println("Costume Changed To: " + game.getCostumeName());
     				panel.repaint();
